@@ -19,7 +19,7 @@ function [Population, FrontNo, CrowdDis] = EnvironmentalSelection(Population, N)
     
     % Directly save solutions in the first front
     NextNo(find(FrontNo==1)) = 1;
-    NDpoints  = Population(find(FrontNo==1));
+    NDpoints = Population(find(FrontNo==1));
 
     %% Duplication handling (objective space)
     for i = 2:max(FrontNo)
@@ -31,7 +31,6 @@ function [Population, FrontNo, CrowdDis] = EnvironmentalSelection(Population, N)
             index = find(c==j);
             if size(index, 1) > 1
                 selectedNo = DuplicationSelection(No(index), Population, NDpoints);
-                %SUMN = SUMN+size(index,1)-size(selectedNo,1);
                 FrontPop = [FrontPop, selectedNo];
             else
                 FrontPop = [FrontPop, No(index)];
@@ -50,7 +49,6 @@ function [Population, FrontNo, CrowdDis] = EnvironmentalSelection(Population, N)
     minobj1 = PopObj(index, 1);
 
     if sum(PopObj(:, 1)<=minobj1) >= N
-        %disp(sum(PopObj(:, 1)<=minobj1));
         %% Selection among feasible solutions
         boolFeasible = PopObj(:, 1)<=minobj1;
         Population = Population(1:end, boolFeasible);
@@ -76,10 +74,8 @@ function [Population, FrontNo, CrowdDis] = EnvironmentalSelection(Population, N)
         Population = Population(Next);
         FrontNo    = FrontNo(Next);
         CrowdDis   = CrowdDis(Next);
-        %disp(SUMN);
     else
         %% Selection including infeasible solutions
-        disp('Too many infeasible solutions!');
         [~, rank]  = sort(PopObj(:, 1));
         if size(Population, 2)<N
             N = size(Population, 2);
