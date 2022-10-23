@@ -1,11 +1,9 @@
 classdef PRDH < ALGORITHM
 % <multi> <binary> 
-% Solving Multi-objective Feature Selection Problems in Classification via 
-% Problem Reformulation and Duplication Handling
 %------------------------------- Reference --------------------------------
-% K. Deb, A. Pratap, S. Agarwal, and T. Meyarivan, A fast and elitist
-% multiobjective genetic algorithm: NSGA-II, IEEE Transactions on
-% Evolutionary Computation, 2002, 6(2): 182-197.
+% R. Jiao, B. Xue, and M. Zhang, Solving Multi-objective Feature Selection 
+% Problems in Classification via Problem Reformulation and Duplication 
+% Handling, IEEE Transactions on Evolutionary Computation, 2022.
 %------------------------------- Copyright --------------------------------
 % Copyright (c) 2021 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
