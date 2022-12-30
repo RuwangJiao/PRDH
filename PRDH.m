@@ -1,7 +1,7 @@
 classdef PRDH < ALGORITHM
 % <multi> <binary> 
 %------------------------------- Reference --------------------------------
-% R. Jiao, B. Xue, and M. Zhang, Solving Multi-objective Feature Selection 
+% R. Jiao, B. Xue, and M. Zhang, Solving Multiobjective Feature Selection 
 % Problems in Classification via Problem Reformulation and Duplication 
 % Handling, IEEE Transactions on Evolutionary Computation, 2022.
 %------------------------------- Copyright --------------------------------
